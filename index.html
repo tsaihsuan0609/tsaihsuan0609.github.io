@@ -6,72 +6,142 @@
     <title>個人簡介</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
+            color: #333;
         }
+
         .container {
-            width: 80%;
+            width: 85%;
             margin: auto;
             overflow: hidden;
         }
+
         header {
-            background: #333;
+            background: linear-gradient(90deg, #3358ff, #77aaff);
             color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #77aaff 3px solid;
+            padding: 20px 0;
+            border-bottom: 3px solid #fff;
         }
+
         header a {
             color: #fff;
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 16px;
+            font-size: 14px;
+            transition: color 0.3s ease;
         }
+
+        header a:hover {
+            color: #ffcc00;
+        }
+
         header ul {
             padding: 0;
             list-style: none;
         }
+
         header li {
             float: left;
             display: inline;
-            padding: 0 20px 0 20px;
+            padding: 0 15px;
         }
+
         header #branding {
             float: left;
         }
+
         header #branding h1 {
             margin: 0;
+            font-size: 24px;
+            text-transform: uppercase;
         }
+
         header nav {
             float: right;
-            margin-top: 10px;
+            margin-top: 5px;
         }
+
         .showcase {
-            min-height: 400px;
-            background: url('showcase.jpg') no-repeat 0 -400px;
+            height: 100vh;
+            background: url('showcase.jpg') no-repeat center center/cover;
             text-align: center;
             color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
+
         .showcase h1 {
-            margin-top: 100px;
-            font-size: 55px;
-            margin-bottom: 10px;
+            font-size: 60px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
+
         .showcase p {
-            font-size: 20px;
+            font-size: 22px;
+            max-width: 600px;
+            margin: auto;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
+
         .content {
-            padding: 20px;
+            padding: 40px 0;
             background: #fff;
         }
+
         .content h2 {
-            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #555;
+            border-bottom: 2px solid #77aaff;
+            display: inline-block;
+            padding-bottom: 5px;
         }
+
         .content p {
+            font-size: 18px;
             color: #666;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            header nav ul {
+                text-align: center;
+            }
+
+            header li {
+                display: block;
+                padding: 10px 0;
+            }
+
+            .showcase h1 {
+                font-size: 40px;
+            }
+
+            .showcase p {
+                font-size: 18px;
+            }
+
+            .container {
+                width: 95%;
+            }
         }
     </style>
 </head>
@@ -84,46 +154,52 @@
             <nav>
                 <ul>
                     <li><a href="#about">關於我</a></li>
-                    <li><a href="#skills">技能</a></li>
+                    <li><a href="#skills">興趣</a></li>
                     <li><a href="#contact">聯絡我</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <section class="showcase">
         <div class="container">
             <h1>歡迎來到我的個人網站</h1>
-            <p>這裡是我的個人簡介，展示我的技能和經歷。</p>
+            <p>這裡展示我的興趣、技能和經歷。希望你能了解更多關於我。</p>
         </div>
     </section>
+
     <section class="content" id="about">
         <div class="container">
             <h2>關於我</h2>
-            <p>我是劉采璇，一位學生。我就讀於高雄科技大學，班級是高瞻科技不分系三甲。
-                我的學號是C111196110
-            </p>
+            <p>我是劉采璇，目前就讀於國立高雄科技大學高瞻科技不分系三年級。我的學號是 C111196110。</p>
         </div>
     </section>
+
     <section class="content" id="skills">
         <div class="container">
-            <h2>技能</h2>
-            <p>以下是我擁有的一些技能：</p>
+            <h2>興趣</h2>
+            <p>以下是我的一些興趣和技能：</p>
             <ul>
-                <li>技能1</li>
-                <li>技能2</li>
-                <li>技能3</li>
+                <li>畫畫</li>
+                <li>看小說</li>
+                <li>聽音樂</li>
             </ul>
         </div>
     </section>
+
     <section class="content" id="contact">
         <div class="container">
             <h2>聯絡我</h2>
             <p>你可以通過以下方式聯絡我：</p>
             <ul>
-                <li>Email: c111196110@nkust.edu.tw</li>
-                <li>電話: 0971737588</li>
+                <li>Email: <a href="mailto:c111196110@nkust.edu.tw">c111196110@nkust.edu.tw</a></li>
+                <li>電話: 0971-737-588</li>
             </ul>
         </div>
     </section>
+
+    <footer>
+        <p>&copy; 2024 劉采璇 | 個人簡介網站</p>
+    </footer>
 </body>
 </html>
